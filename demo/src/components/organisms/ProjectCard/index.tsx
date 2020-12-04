@@ -1,18 +1,23 @@
 import React from "react";
 import { Card } from "antd";
-
-export default function index() {
+import styled from "styled-components";
+const Img = styled.img`
+  height: 300px;
+`;
+type props = {
+  name: string;
+  img: string;
+};
+const Index = (props: props) => {
   return (
-    <Card
-      hoverable
-      style={{ width: 400, margin: "10px" }}
-      cover={
-        <img
-          alt="example"
-          src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-        />
-      }
-      title={"相談室"}
-    ></Card>
+    <div>
+      <Card
+        hoverable
+        style={{ width: 400, margin: "10px" }}
+        cover={<Img alt="example" src={props.img} />}
+        title={props.name}
+      />
+    </div>
   );
-}
+};
+export default Index;

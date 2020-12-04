@@ -1,17 +1,30 @@
 import React from "react";
 import { Carousel } from "antd";
 import Sample from "../../../Img/sample.png";
+import Sample2 from "../../../Img/sample2.jpg";
+import Sample3 from "../../../Img/sample3.jpg";
+import Sample4 from "../../../Img/sample4.jpg";
 import styled from "styled-components";
+
+const Wrapper = styled.section`
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: inherit;
+  z-index: 20;
+  margin: 48px 0px;
+`;
+
 const Img = styled.img`
+  width: 80%;
+  height: 480px;
+  border-radius: 10px;
   margin: 0 auto;
-  margin-top: 28px;
-  width: 88%;
-  height: 600px;
 `;
 
 export default function index() {
   return (
-    <div>
+    <Wrapper>
       {" "}
       <Carousel autoplay>
         <div>
@@ -21,20 +34,20 @@ export default function index() {
         </div>
         <div>
           <h3>
-            <Img src={Sample} alt="" />
+            <Img src={Sample2} alt="" />
           </h3>
         </div>
         <div>
           <h3>
-            <Img src={Sample} alt="" />
+            <Img src={Sample3} alt="" />
           </h3>
         </div>
         <div>
           <h3>
-            <Img src={Sample} alt="" />
+            <Img src={Sample4} alt="" />
           </h3>
         </div>
       </Carousel>
-    </div>
+    </Wrapper>
   );
 }

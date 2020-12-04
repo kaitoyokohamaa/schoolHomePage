@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import Logo from "../../atoms/Logo";
 const Wrapper = styled.div`
@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   grid-template-columns: 100%;
   padding-bottom: 0px;
   box-sizing: border-box;
+  border: 0 solid #dae1e7;
 `;
 
 const NavWrapper = styled.div`
@@ -47,16 +48,15 @@ export default function index() {
       <Logo />
       <NavWrapper>
         {menueLink?.map((link) => (
-          <BrowserRouter>
-            <Link
-              style={{
-                margin: "0 30px",
-              }}
-              to={link.path}
-            >
-              {link.label}
-            </Link>
-          </BrowserRouter>
+          <Link
+            style={{
+              margin: "0 30px",
+              color: "#000",
+            }}
+            to={link.path}
+          >
+            {link.label}
+          </Link>
         ))}
       </NavWrapper>
     </Wrapper>

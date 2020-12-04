@@ -10,12 +10,12 @@ const Wrapper = styled.div`
   align-self: start;
 `;
 const Title = styled.span`
-  color: #ffff;
+  color: #000;
   font-weight: bold;
-  font-size: 41px;
+  font-size: 38px;
 `;
 const SubTitle = styled.h6`
-  color: #fff;
+  color: #00000;
   font-size: 17px;
   font-weight: bold;
   margin-top: 0;
