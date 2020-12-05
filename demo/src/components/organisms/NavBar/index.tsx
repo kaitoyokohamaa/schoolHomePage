@@ -21,9 +21,11 @@ const NavWrapper = styled.div`
   margin-top: 58px;
   margin-left: 218px;
 `;
-const LinkWrapper = styled.div`
+const NavLink = styled(Link)`
+  color: #000;
+  margin: 30px 40px;
   &:hover {
-    backgrounf-color: #ffff;
+    color: #ff8a73;
   }
 `;
 
@@ -48,15 +50,7 @@ export default function index() {
       <Logo />
       <NavWrapper>
         {menueLink?.map((link) => (
-          <Link
-            style={{
-              margin: "0 30px",
-              color: "#000",
-            }}
-            to={link.path}
-          >
-            {link.label}
-          </Link>
+          <NavLink to={link.path}>{link.label}</NavLink>
         ))}
       </NavWrapper>
     </Wrapper>

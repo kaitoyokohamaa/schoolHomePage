@@ -13,7 +13,7 @@ const Wrapper = styled.section`
   margin-left: auto;
   margin-right: auto;
   border: 0 solid #dae1e7;
-  background-color: #ffff;
+  background: #ffff;
   padding-bottom: 58px;
 `;
 const CardWrapper = styled.div`

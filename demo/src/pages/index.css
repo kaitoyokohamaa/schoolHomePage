@@ -19,10 +19,9 @@
 .ant-card-hoverable {
   cursor: pointer;
   position: relative;
-  padding: 30px;
+  padding: 5px;
   width: 100%;
   box-sizing: border-box;
-  border-radius: 8px;
   transition: all 0.2s cubic-bezier(0.02, 0.54, 0.58, 1);
   -webkit-transition: all 0.2s cubic-bezier(0.02, 0.54, 0.58, 1);
 }
