@@ -31,11 +31,14 @@
     "react-dom": "^16.13.1",
     "react-genie": "^0.2.2",
     "react-genie-styled-components": "^0.1.1",
+    "react-responsive": "^8.2.0",
     "react-router-dom": "^5.2.0",
+    "react-spring": "^8.0.27",
     "styled-components": "^5.2.1",
     "styled-reset": "^4.3.1"
   },
   "devDependencies": {
-    "cross-env": "^7.0.2"
+    "cross-env": "^7.0.2",
+    "svg-react-loader": "^0.4.6"
   }
 }

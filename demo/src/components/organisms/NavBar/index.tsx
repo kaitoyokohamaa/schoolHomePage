@@ -2,8 +2,10 @@ import React, { Fragment, useState } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import Logo from "../../atoms/Logo";
+import Wave from "../../../Img/wave.png";
 const Wrapper = styled.div`
-  position: static;
+  padding-top: 30px;
+
   display: grid;
   display: flex;
   height: auto;
@@ -14,6 +16,7 @@ const Wrapper = styled.div`
   padding-bottom: 0px;
   box-sizing: border-box;
   border: 0 solid #dae1e7;
+  background-color: #c9dbfb;
 `;
 
 const NavWrapper = styled.div`
@@ -23,10 +26,14 @@ const NavWrapper = styled.div`
 `;
 const NavLink = styled(Link)`
   color: #000;
-  margin: 30px 40px;
+  padding: 30px 40px;
   &:hover {
     color: #ff8a73;
   }
+`;
+const WaveImg = styled.img`
+  margin-top: -18px;
+  width: 100%;
 `;
 
 const menueLink = [
@@ -46,13 +53,24 @@ const menueLink = [
 
 export default function index() {
   return (
-    <Wrapper>
-      <Logo />
-      <NavWrapper>
-        {menueLink?.map((link) => (
-          <NavLink to={link.path}>{link.label}</NavLink>
-        ))}
-      </NavWrapper>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Logo />
+        <NavWrapper>
+          {menueLink?.map((link) => (
+            <NavLink
+              activeStyle={{
+                fontWeight: "bold",
+                color: "#ff8a73",
+              }}
+              to={link.path}
+            >
+              {link.label}
+            </NavLink>
+          ))}
+        </NavWrapper>
+      </Wrapper>
+      <WaveImg src={Wave} />
+    </>
   );
 }

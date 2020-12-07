@@ -22,9 +22,38 @@
   padding: 5px;
   width: 100%;
   box-sizing: border-box;
-  transition: all 0.2s cubic-bezier(0.02, 0.54, 0.58, 1);
-  -webkit-transition: all 0.2s cubic-bezier(0.02, 0.54, 0.58, 1);
+  transition: all 0.2s cubic-bezier(1.02, 1.54, 1.58, 1);
+  -webkit-transition: all 0.2s cubic-bezier(1.02, 1.54, 1.58, 1);
 }
 .ant-card-hoverable:hover {
-  background-color: rgb(229, 238, 255);
+  transition: box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 12px 12px gray;
+  -webkit-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: translateY(-20px);
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+body {
+  font-family: YuGothic, "游ゴシック", Meiryo, sans-serif;
+}
+
+.comform-wrap {
+  box-sizing: border-box;
+  position: relative;
+  margin: 8px auto 8px auto;
+  margin-top: 104px;
+  max-width: 620px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  padding: 4px 4px 0px 4px;
+}
+button {
+  padding: 3px;
+  border: 1px solid;
+}
+
+html {
+  background-color: #fff;
 }

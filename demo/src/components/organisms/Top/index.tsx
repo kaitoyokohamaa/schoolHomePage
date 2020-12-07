@@ -1,11 +1,10 @@
 import React from "react";
 import { Carousel } from "antd";
 import Sample from "../../../Img/sample.png";
-import Sample2 from "../../../Img/sample2.jpg";
-import Sample3 from "../../../Img/sample3.jpg";
-import Sample4 from "../../../Img/sample4.jpg";
-import styled from "styled-components";
 
+import styled from "styled-components";
+import { Reveal } from "react-genie";
+import { Animation } from "react-genie-styled-components";
 const Wrapper = styled.section`
   width: 100%;
   height: 100%;
@@ -13,41 +12,91 @@ const Wrapper = styled.section`
   visibility: inherit;
   z-index: 20;
   margin: 48px 0px;
+  font-size: 20px;
+  padding-bottom: 5px;
+  background-color: #ffff;
+  display: block;
+  position: relative;
 `;
 
 const Img = styled.img`
-  width: 80%;
-  height: 480px;
+  width: 100%;
+  padding-left: 300px;
+  min-height: 450px;
+  max-height: 590px;
   border-radius: 10px;
   margin: 0 auto;
 `;
 
-export default function index() {
+const SubTitle = styled.h2`
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+
+  -webkit-letter-spacing: 0.15em;
+  -moz-letter-spacing: 0.15em;
+  -ms-letter-spacing: 0.15em;
+  letter-spacing: 0.15em;
+  position: absolute;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  z-index: 3;
+  opacity: 0.8;
+  top: 297px;
+  color: #000000;
+  padding-left: 100px;
+  :before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    left: 0px;
+    background: #c9dbfb;
+  }
+`;
+const MiniTitle = styled.h3`
+  font-size: 14px;
+`;
+
+export default function Index() {
   return (
-    <Wrapper>
-      {" "}
-      <Carousel autoplay>
-        <div>
-          <h3>
-            <Img src={Sample} alt="" />
-          </h3>
-        </div>
-        <div>
-          <h3>
-            <Img src={Sample2} alt="" />
-          </h3>
-        </div>
-        <div>
-          <h3>
-            <Img src={Sample3} alt="" />
-          </h3>
-        </div>
-        <div>
-          <h3>
-            <Img src={Sample4} alt="" />
-          </h3>
-        </div>
-      </Carousel>
-    </Wrapper>
+    <>
+      {/* <WaveImg src={TopWave} /> */}
+      <Wrapper>
+        {" "}
+        <Reveal animation={Animation.BounceInLeft}>
+          <Carousel autoplay>
+            <div>
+              <h3>
+                <Img src={Sample} alt="" />
+              </h3>
+            </div>
+            <div>
+              <h3>
+                <Img src={Sample} alt="" />
+              </h3>
+            </div>
+            <div>
+              <h3>
+                <Img src={Sample} alt="" />
+              </h3>
+            </div>
+            <div>
+              <h3>
+                <Img src={Sample} alt="" />
+              </h3>
+            </div>
+          </Carousel>
+        </Reveal>
+        <SubTitle>
+          <Reveal animation={Animation.FadeInUp}>
+            今日と言う日を<br></br>最高の1日にしよう！<br></br>
+            <MiniTitle>
+              この1日を最高<br></br>の一日に<br></br>したいんですよ！
+            </MiniTitle>
+          </Reveal>
+        </SubTitle>
+      </Wrapper>
+    </>
   );
 }

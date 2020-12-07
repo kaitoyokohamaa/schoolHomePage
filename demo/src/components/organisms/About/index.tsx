@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "antd";
 import sample9 from "../../../Img/sample9.jpg";
-import { Reveal } from "react-genie";
-import { Animation } from "react-genie-styled-components";
+
 const Wrapper = styled.section`
   width: 80%;
   height: 100%;
@@ -13,7 +12,22 @@ const Wrapper = styled.section`
   margin: 0 auto;
   margin-bottom: 38px;
 `;
-const Title = styled.h1`
+const TitleWrapper = styled.h2`
+  width: 100%;
+  text-align: center;
+  :before {
+    content: "";
+    display: block;
+    text-align: center;
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    margin: 0 auto 25px;
+    background-color: black;
+    left: 50%;
+  }
+`;
+const Title = styled.span`
   text-align: center;
   width: 100%;
   font-weight: 700;
@@ -24,18 +38,7 @@ const Title = styled.h1`
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   color: #0000000;
-  margin-top: 78px;
-  :before {
-    content: "";
-    transform: translateY(50%) translateX(-50%);
-    left: 50%;
-    top: 40px;
-    position: absolute;
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 9999px;
-    background-color: black;
-  }
+  margin-top: 68px;
 `;
 const SubTitle = styled.h2`
   margin-top: 78px;
@@ -51,29 +54,27 @@ const Img = styled.img`
 const Paragraph = styled.p`
   color: #000;
   width: 100%;
-  margin-top: 50px;
+  padding-top: 50px;
   font-size: 18px;
-  font-style: oblique;
 `;
 export default function Index() {
   return (
     <Wrapper>
-      <Title>このゼミについて</Title>
+      <TitleWrapper>
+        <Title>このゼミについて</Title>
+      </TitleWrapper>
+
       <Row>
         <Col span={12}>
-          <Reveal animation={Animation.BounceInLeft} delay={1}>
-            <Img src={sample9} />
-          </Reveal>
+          <Img src={sample9} />
         </Col>
 
         <Col span={12}>
-          <Reveal animation={Animation.BounceInRight} delay={1}>
-            <SubTitle>ゼミの活動内容</SubTitle>
-            <Paragraph>
-              ゼミでは、先生が講義を行うのではなく、学生がテキストや論文を読み込んでプレゼンテーションを行い（輪読）、チームや個人で研究をします。
-              ​ゼミによっては、他大学とのプレゼン大会や討論会、他大学との合同ゼミ（インゼミ）、ビジネスコンテストへの出場など、大学外での発表や討論を行うゼミもあり、それぞれのゼミによって異なります
-            </Paragraph>
-          </Reveal>
+          <SubTitle>ゼミの活動内容</SubTitle>
+          <Paragraph>
+            ゼミでは、先生が講義を行うのではなく、学生がテキストや論文を読み込んでプレゼンテーションを行い（輪読）、チームや個人で研究をします。
+            ​ゼミによっては、他大学とのプレゼン大会や討論会、他大学との合同ゼミ（インゼミ）、ビジネスコンテストへの出場など、大学外での発表や討論を行うゼミもあり、それぞれのゼミによって異なります
+          </Paragraph>
         </Col>
       </Row>
     </Wrapper>
