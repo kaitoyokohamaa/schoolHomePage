@@ -41,7 +41,7 @@ export default function index() {
 
   const NavWrapper = styled.div`
     dispaly: flex;
-    margin-top: 58px;
+    margin-top: 25px;
     margin-left: 218px;
   `;
 
