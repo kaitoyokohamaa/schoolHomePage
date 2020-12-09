@@ -1,0 +1,18 @@
+{
+  "main.js": "render-page.js",
+  "main.js.map": "render-page.js.map",
+  "static/huruse.jpg": "static/huruse-23d739928a7e34e04ab85be415d79ff2.jpg",
+  "static/huruse2.jpg": "static/huruse2-8c64461ee0fb9c3662d52061a0420fd7.jpg",
+  "static/kaito1.jpg": "static/kaito1-f9061882f391f4b7e067d4192a6ad33f.jpg",
+  "static/kaito2.jpg": "static/kaito2-7532fcfdf8f9c4ebaf4e43f106979641.jpg",
+  "static/sample.png": "static/sample-dd4d6aa523f79d40a77349826b7295ad.png",
+  "static/sample10.jpg": "static/sample10-64a5122971906bce1b159b5d095e48db.jpg",
+  "static/sample5.jpg": "static/sample5-dd547868e8cb0e706da87f32bee66598.jpg",
+  "static/sample6.jpg": "static/sample6-fab68b44557d74beb259976babf672ea.jpg",
+  "static/sample7.jpg": "static/sample7-bd7929b0307f130467dea3c58acf7eaf.jpg",
+  "static/sample8.jpg": "static/sample8-e2e73e24e44eacf42f0e6ac588f68ad9.jpg",
+  "static/sample9.jpg": "static/sample9-d5e7e8e29461f4a64bfed2f1d635c9e9.jpg",
+  "static/tomaru.jpg": "static/tomaru-00d3c8c37672e48f8ba32316fef3ad41.jpg",
+  "static/topWave.jpg": "static/topWave-5377a457863b1f90d784667a8c85574e.jpg",
+  "static/wave.png": "static/wave-ff2f9cb4c6a9260625433202ab17ea25.png"
+}
