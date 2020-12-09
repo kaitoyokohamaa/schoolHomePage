@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
+import MediaQuery from "react-responsive";
 const Wrapper = styled.div``;
 
 const ImgWrapper = styled.div`
@@ -27,6 +27,13 @@ const Img = styled.img`
     border: 8px solid #c9dbfb;
   }
 `;
+
+const SPImg = styled.img`
+  border-radius: 50%;
+  width: 172px;
+  height: 172px;
+  padding: 10px;
+`;
 const Name = styled.h2`
   display: inline-block;
   background-color: #c9dbfb;
@@ -50,6 +57,7 @@ const Discreption = styled.div`
   color: #000;
   margin-top: 10px;
 `;
+
 type props = {
   name: string;
   img: string;
@@ -61,33 +69,42 @@ export default function Index(props: props) {
   const [hover, setHover] = useState(true);
   return (
     <Wrapper>
-      <ImgWrapper>
-        <>
-          {hover ? (
-            <>
-              <ImgArea
-                onMouseEnter={() => setHover(false)}
-                onMouseLeave={() => setHover(true)}
-              >
-                <Img src={props.img} />
-              </ImgArea>
-              <Name>{props.name}</Name>
-              <Discreption>{props.discription}</Discreption>
-            </>
-          ) : (
-            <>
-              <ImgArea
-                onMouseEnter={() => setHover(false)}
-                onMouseLeave={() => setHover(true)}
-              >
-                <Img src={props.img2} />
-              </ImgArea>{" "}
-              <Name>{props.name}</Name>
-              <Discreption>{props.discription}</Discreption>
-            </>
-          )}
-        </>
-      </ImgWrapper>
+      <>
+        <MediaQuery minDeviceWidth={768}>
+          <ImgWrapper>
+            {hover ? (
+              <>
+                <ImgArea
+                  onMouseEnter={() => setHover(false)}
+                  onMouseLeave={() => setHover(true)}
+                >
+                  <Img src={props.img} />
+                </ImgArea>
+                <Name>{props.name}</Name>
+                <Discreption>{props.discription}</Discreption>
+              </>
+            ) : (
+              <>
+                <ImgArea
+                  onMouseEnter={() => setHover(false)}
+                  onMouseLeave={() => setHover(true)}
+                >
+                  <Img src={props.img2} />
+                </ImgArea>{" "}
+                <Name>{props.name}</Name>
+                <Discreption>{props.discription}</Discreption>
+              </>
+            )}
+          </ImgWrapper>
+        </MediaQuery>
+
+        <MediaQuery maxDeviceWidth={768}>
+          <ImgArea>
+            <SPImg src={props.img} />
+          </ImgArea>
+          <Name>{props.name}</Name>
+        </MediaQuery>
+      </>
     </Wrapper>
   );
 }

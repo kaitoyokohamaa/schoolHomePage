@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Header from "../components/organisms/Header";
 import Top from "../components/organisms/Top";
 import Project from "../components/organisms/Project";
@@ -12,14 +12,10 @@ import styled from "styled-components";
 import "./index.css";
 import { Reveal } from "react-genie";
 import { Animation } from "react-genie-styled-components";
+import MediaQuery from "react-responsive";
 export default function Index() {
   const Wrapper = styled.div`
     background-color: #ffff;
-
-    webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
   `;
 
   return (

@@ -5,6 +5,7 @@ import Sample from "../../../Img/sample.png";
 import styled from "styled-components";
 import { Reveal } from "react-genie";
 import { Animation } from "react-genie-styled-components";
+import MediaQuery from "react-responsive";
 const Wrapper = styled.section`
   width: 100%;
   height: 100%;
@@ -27,6 +28,13 @@ const Img = styled.img`
   border-radius: 10px;
   margin: 0 auto;
 `;
+const SPImg = styled.img`
+  width: 100%;
+  min-height: 450px;
+  max-height: 590px;
+  border-radius: 10px;
+  margin: 0 auto;
+`;
 
 const SubTitle = styled.h2`
   display: block;
@@ -44,6 +52,7 @@ const SubTitle = styled.h2`
   top: 297px;
   color: #000000;
   padding-left: 100px;
+
   :before {
     content: "";
     display: block;
@@ -68,34 +77,59 @@ export default function Index() {
           <Carousel autoplay>
             <div>
               <h3>
-                <Img src={Sample} alt="" />
+                <MediaQuery minDeviceWidth={768}>
+                  <Img src={Sample} alt="" />
+                </MediaQuery>
+                <MediaQuery maxDeviceWidth={768}>
+                  <SPImg src={Sample} alt="" />
+                </MediaQuery>
               </h3>
             </div>
             <div>
               <h3>
-                <Img src={Sample} alt="" />
+                <MediaQuery minDeviceWidth={768}>
+                  <Img src={Sample} alt="" />
+                </MediaQuery>
+                <MediaQuery maxDeviceWidth={768}>
+                  {" "}
+                  <SPImg src={Sample} alt="" />
+                </MediaQuery>
               </h3>
             </div>
             <div>
               <h3>
-                <Img src={Sample} alt="" />
+                <MediaQuery minDeviceWidth={768}>
+                  <Img src={Sample} alt="" />
+                </MediaQuery>
+                <MediaQuery maxDeviceWidth={768}>
+                  {" "}
+                  <SPImg src={Sample} alt="" />
+                </MediaQuery>
               </h3>
             </div>
             <div>
               <h3>
-                <Img src={Sample} alt="" />
+                <MediaQuery minDeviceWidth={768}>
+                  <Img src={Sample} alt="" />
+                </MediaQuery>
+                <MediaQuery maxDeviceWidth={768}>
+                  {" "}
+                  <SPImg src={Sample} alt="" />
+                </MediaQuery>
               </h3>
             </div>
           </Carousel>
         </Reveal>
-        <SubTitle>
-          <Reveal animation={Animation.FadeInUp}>
-            今日と言う日を<br></br>最高の1日にしよう！<br></br>
-            <MiniTitle>
-              この1日を最高<br></br>の一日に<br></br>したいんですよ！
-            </MiniTitle>
-          </Reveal>
-        </SubTitle>
+        <MediaQuery minDeviceWidth={768}>
+          <SubTitle>
+            <Reveal animation={Animation.FadeInUp}>
+              今日と言う日を<br></br>最高の1日にしよう！<br></br>
+              <MiniTitle>
+                この1日を最高<br></br>の一日に<br></br>したいんですよ！
+              </MiniTitle>
+            </Reveal>
+          </SubTitle>
+        </MediaQuery>
       </Wrapper>
     </>
   );

@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-cara": "^1.2.18",
+    "@types/react-responsive": "^8.0.2",
     "@types/react-router-dom": "^5.1.6",
     "@types/styled-components": "^5.1.4",
     "antd": "^4.9.1",

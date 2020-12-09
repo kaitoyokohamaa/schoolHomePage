@@ -11,6 +11,7 @@ import Kaito2 from "../Img/kaito2.jpg";
 import Footer from "../components/organisms/Footer";
 import "./index.css";
 import "antd/dist/antd.css";
+import MediaQuery from "react-responsive";
 const Wrapper = styled.div`
   background-color: #fff;
 `;
@@ -36,6 +37,12 @@ const MemberWrapper = styled.div`
   width: 1080px;
   margin: 0 auto;
   padding: 0 40px;
+`;
+
+const SPMemberWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
 `;
 const Members = [
   {
@@ -184,17 +191,33 @@ export default function member() {
     <Wrapper>
       <Reset />
       <Header />
-      <MemberWrapper>
-        <Title>ゼミメンバー</Title>
-        {Members.map((contents) => (
-          <Member
-            img={contents.img}
-            name={contents.name}
-            img2={contents.img2}
-            discription={contents.discription}
-          />
-        ))}
-      </MemberWrapper>
+
+      <MediaQuery minDeviceWidth={768}>
+        <MemberWrapper>
+          <Title>ゼミメンバー</Title>
+          {Members.map((contents) => (
+            <Member
+              img={contents.img}
+              name={contents.name}
+              img2={contents.img2}
+              discription={contents.discription}
+            />
+          ))}
+        </MemberWrapper>
+      </MediaQuery>
+      <MediaQuery maxDeviceWidth={768}>
+        <SPMemberWrapper>
+          <Title>ゼミメンバー</Title>
+          {Members.map((contents) => (
+            <Member
+              img={contents.img}
+              name={contents.name}
+              img2={contents.img2}
+              discription={contents.discription}
+            />
+          ))}
+        </SPMemberWrapper>
+      </MediaQuery>
       <Footer />
     </Wrapper>
   );

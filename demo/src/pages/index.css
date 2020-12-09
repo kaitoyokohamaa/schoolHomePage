@@ -1,5 +1,5 @@
 .ant-card-body {
-  padding: 0;
+  padding: 0px !important;
 }
 .ant-card-bordered {
   border: 1px solid #fff;
@@ -15,7 +15,9 @@
   border-bottom: 1px solid #ffff;
   border-radius: 2px 2px 0 0;
 }
-
+.ant-card-cover img {
+  border-radius: 10px !important;
+}
 .ant-card-hoverable {
   cursor: pointer;
   position: relative;
@@ -56,4 +58,8 @@ button {
 
 html {
   background-color: #fff;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
 }

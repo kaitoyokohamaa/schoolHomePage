@@ -9,6 +9,7 @@ import sample8 from "../../../Img/sample8.jpg";
 import sample10 from "../../../Img/sample10.jpg";
 import TopWave from "../../../Img/topWave.jpg";
 import Wave from "../../../Img/wave.png";
+import MediaQuery from "react-responsive";
 const TopWaveImg = styled.img`
   margin-top: -20px;
   width: 100%;
@@ -28,9 +29,17 @@ const CardWrapper = styled.div`
   margin: 0 auto;
   width: 1080px;
 `;
+
+const SPCardWrapper = styled.div`
+  width: 100%;
+`;
 const ProjectCardWrapper = styled.div`
   display: flex;
   flex-flow: wrap;
+`;
+
+const SPProjectCardWrapper = styled.div`
+  text-align: center;
 `;
 
 const TitleWrapper = styled.h2`
@@ -54,6 +63,34 @@ const Title = styled.span`
   font-weight: 700;
   margin-bottom: 2.5rem;
   font-size: 1.5rem;
+  position: relative;
+  display: inline-block;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  color: #0000000;
+  margin-top: 68px;
+`;
+const SPTitleWrapper = styled.h2`
+  width: 100%;
+  text-align: center;
+  :before {
+    content: "";
+    display: block;
+    text-align: center;
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    margin: 0 auto 25px;
+    background-color: black;
+    left: 50%;
+  }
+`;
+const SPTitle = styled.span`
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  font-size: 20px;
   position: relative;
   display: inline-block;
   padding-left: 1.25rem;
@@ -91,20 +128,38 @@ export default function index() {
     <>
       <TopWaveImg src={TopWave} />
       <Wrapper>
-        <TitleWrapper>
-          <Title>プロジェクト</Title>
-        </TitleWrapper>
-
-        <CardWrapper>
-          <ProjectCardWrapper>
-            {Project.map((contents) => (
-              <StyledLink href={contents.Link}>
-                <ProjectCard name={contents.name} img={contents.img} />
-              </StyledLink>
-            ))}
-          </ProjectCardWrapper>
-        </CardWrapper>
+        {/* PCサイズ */}
+        <MediaQuery minDeviceWidth={768}>
+          <TitleWrapper>
+            <Title>プロジェクト</Title>
+          </TitleWrapper>
+          <CardWrapper>
+            <ProjectCardWrapper>
+              {Project.map((contents) => (
+                <StyledLink key={contents.name} href={contents.Link}>
+                  <ProjectCard name={contents.name} img={contents.img} />
+                </StyledLink>
+              ))}
+            </ProjectCardWrapper>
+          </CardWrapper>
+        </MediaQuery>
+        {/* SPサイズ */}
+        <MediaQuery maxDeviceWidth={768}>
+          <SPTitleWrapper>
+            <SPTitle>プロジェクト</SPTitle>
+          </SPTitleWrapper>
+          <SPCardWrapper>
+            <SPProjectCardWrapper>
+              {Project.map((contents) => (
+                <StyledLink key={contents.name} href={contents.Link}>
+                  <ProjectCard name={contents.name} img={contents.img} />
+                </StyledLink>
+              ))}
+            </SPProjectCardWrapper>
+          </SPCardWrapper>
+        </MediaQuery>
       </Wrapper>
+
       <WaveImg src={Wave} />
     </>
   );
