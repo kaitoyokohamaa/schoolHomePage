@@ -5,7 +5,6 @@ const Wrapper = styled.div``;
 
 const ImgWrapper = styled.div`
   width: 287px;
-
   margin: 10px 20px 0;
   margin-top: 70px;
 `;
@@ -24,7 +23,7 @@ const Img = styled.img`
   :hover {
     width: 287px;
     height: 287px;
-    border: 8px solid #c9dbfb;
+    border: 8px solid #fbfbf0;
   }
 `;
 
@@ -36,11 +35,8 @@ const SPImg = styled.img`
 `;
 const Name = styled.h2`
   display: inline-block;
-  background-color: #c9dbfb;
+  background-color: #fbfbf0;
   padding: 3px 3px 2px 11px;
-  font-family: "Noto Sans", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro",
-    Arial, "メイリオ", Meiryo, sans-serif, YuGothic, "游ゴシック", Meiryo,
-    sans-serif;
   color: #282828;
   font-size: 14px;
   font-weight: 700;
@@ -50,7 +46,6 @@ const Name = styled.h2`
 `;
 const Discreption = styled.div`
   font-size: 12px;
-  font-family: sans-serif;
   line-height: 2.2;
   letter-spacing: 0.1em;
   text-align: left;
