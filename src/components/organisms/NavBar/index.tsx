@@ -2,30 +2,24 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import Logo from "../../atoms/Logo";
-import Wave from "../../../Img/wave.png";
+
 import { Hamburger } from "./Hamburger";
 import MediaQuery from "react-responsive";
 
 const menueLink = [
   {
-    label: "ホーム",
-    path: "/",
+    label: "ゼミについて",
+    path: "/about",
   },
   {
     label: "メンバー",
     path: "/member",
-  },
-  {
-    label: "コンタクト",
-    path: "/contact",
   },
 ] as const;
 
 export default function index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const Wrapper = styled.div`
-    padding-top: 30px;
-
     display: grid;
     display: flex;
     height: auto;
@@ -36,7 +30,12 @@ export default function index() {
     padding-bottom: 0px;
     box-sizing: border-box;
     border: 0 solid #dae1e7;
-    background-color: #c9dbfb;
+    padding-bottom: 10px;
+    position: fixed;
+    background-color: #efefd7;
+    top: 0;
+    z-index: 20000;
+    padding: 20px 0px;
   `;
 
   const NavWrapper = styled.div`
@@ -46,8 +45,8 @@ export default function index() {
   `;
 
   const SPNavWrapper = styled.div`
-  transform: translateY(${(menuOpen) => (menuOpen ? "0" : "-100%")});
-	transition: all 500ms ease !important;
+    transform: translateY(${(menuOpen) => (menuOpen ? "0" : "-100%")});
+    transition: all 500ms ease !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -56,10 +55,7 @@ export default function index() {
     padding: 68px 32px 0;
     background-color: #ffff;
     z-index: 90;
-
-}
-
-
+    z-index: 20000;
   `;
 
   const NavLink = styled(Link)`
@@ -79,10 +75,6 @@ export default function index() {
     }
   `;
 
-  const WaveImg = styled.img`
-    margin-top: -18px;
-    width: 100%;
-  `;
   return (
     <>
       <Wrapper>
@@ -121,8 +113,6 @@ export default function index() {
           ))}
         </SPNavWrapper>
       )}
-
-      <WaveImg src={Wave} />
     </>
   );
 }

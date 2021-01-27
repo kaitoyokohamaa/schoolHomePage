@@ -1,7 +1,9 @@
 import React from "react";
 import { Carousel } from "antd";
-import Sample from "../../../Img/sample.png";
-
+import AllStudents from "../../../Img/allstudents.jpg";
+import AllStudents2 from "../../../Img/allstudents2.jpg";
+import Student from "../../../Img/student.jpg";
+import Student2 from "../../../Img/student2.jpg";
 import styled from "styled-components";
 import { Reveal } from "react-genie";
 import { Animation } from "react-genie-styled-components";
@@ -15,18 +17,18 @@ const Wrapper = styled.section`
   margin: 48px 0px;
   font-size: 20px;
   padding-bottom: 5px;
-  background-color: #ffff;
+  background-color: #fbfbf0;
   display: block;
   position: relative;
 `;
 
 const Img = styled.img`
-  width: 100%;
-  padding-left: 300px;
+  width: 80%;
   min-height: 450px;
   max-height: 590px;
   border-radius: 10px;
   margin: 0 auto;
+  margin-top: 130px;
 `;
 const SPImg = styled.img`
   width: 100%;
@@ -70,7 +72,6 @@ const MiniTitle = styled.h3`
 export default function Index() {
   return (
     <>
-      {/* <WaveImg src={TopWave} /> */}
       <Wrapper>
         {" "}
         <Reveal animation={Animation.BounceInLeft}>
@@ -78,58 +79,47 @@ export default function Index() {
             <div>
               <h3>
                 <MediaQuery minDeviceWidth={768}>
-                  <Img src={Sample} alt="" />
+                  <Img src={AllStudents} alt="allstudent" />
                 </MediaQuery>
                 <MediaQuery maxDeviceWidth={768}>
-                  <SPImg src={Sample} alt="" />
+                  <SPImg src={AllStudents} alt="allstudent" />
                 </MediaQuery>
               </h3>
             </div>
             <div>
               <h3>
                 <MediaQuery minDeviceWidth={768}>
-                  <Img src={Sample} alt="" />
+                  <Img src={AllStudents2} alt="allstudent2" />
                 </MediaQuery>
                 <MediaQuery maxDeviceWidth={768}>
-                  {" "}
-                  <SPImg src={Sample} alt="" />
+                  <SPImg src={AllStudents2} alt="allstudent2" />
                 </MediaQuery>
               </h3>
             </div>
             <div>
               <h3>
                 <MediaQuery minDeviceWidth={768}>
-                  <Img src={Sample} alt="" />
+                  <Img src={Student} alt="student" />
                 </MediaQuery>
                 <MediaQuery maxDeviceWidth={768}>
                   {" "}
-                  <SPImg src={Sample} alt="" />
+                  <SPImg src={Student} alt="student" />
                 </MediaQuery>
               </h3>
             </div>
             <div>
               <h3>
                 <MediaQuery minDeviceWidth={768}>
-                  <Img src={Sample} alt="" />
+                  <Img src={Student2} alt="student2" />
                 </MediaQuery>
                 <MediaQuery maxDeviceWidth={768}>
                   {" "}
-                  <SPImg src={Sample} alt="" />
+                  <SPImg src={Student2} alt="student2" />
                 </MediaQuery>
               </h3>
             </div>
           </Carousel>
         </Reveal>
-        <MediaQuery minDeviceWidth={768}>
-          <SubTitle>
-            <Reveal animation={Animation.FadeInUp}>
-              今日と言う日を<br></br>最高の1日にしよう！<br></br>
-              <MiniTitle>
-                この1日を最高<br></br>の一日に<br></br>したいんですよ！
-              </MiniTitle>
-            </Reveal>
-          </SubTitle>
-        </MediaQuery>
       </Wrapper>
     </>
   );

@@ -1,22 +1,31 @@
 import React from "react";
 import styled from "styled-components";
-import Wave from "../../../Img/topWave.jpg";
+
 const Footer = styled.footer`
   width: 100%;
+  height: 150px;
   border-top: 1px solid #dae1e7;
-  text-align: center;
-  background-color: #c9dbfb;
-  margin-top: -10px;
+  text-align: left;
+  margin-top: 10px;
+  padding: 30px 0 0 60px;
   color: #000;
+  background-color: #efefd7;
 `;
-const WaveImg = styled.img`
-  width: 100%;
+
+const FooterTitle = styled.div`
+  font-size: 18px;
+  font-weight: bold;
 `;
+const FooterSubTitle = styled.div``;
 export default function index() {
   return (
     <>
-      <WaveImg src={Wave} />
-      <Footer>Copyright © 2020 @kaikai All Rights Reserved.</Footer>
+      <Footer>
+        <FooterTitle>TOKO UTIDA</FooterTitle>
+        <FooterSubTitle>
+          東洋大学子ども支援額内田ゼミナール　All rights reserved
+        </FooterSubTitle>
+      </Footer>
     </>
   );
 }

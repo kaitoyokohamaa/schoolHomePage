@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
+import { Link } from "gatsby";
 const PCWrapper = styled.div`
   position: relative;
   margin: 9px 0px 0 calc((100% - 980px) * 0.5);
@@ -21,26 +22,22 @@ const Title = styled.span`
   font-weight: bold;
   font-size: 38px;
 `;
-const SubTitle = styled.h6`
-  color: #00000;
-  font-size: 17px;
-  font-weight: bold;
-  margin-top: 0;
-`;
 
 export default function Index() {
   return (
     <>
       <MediaQuery minDeviceWidth={768}>
         <PCWrapper>
-          <Title>TOKO PROJECT</Title>
-          <SubTitle>東洋大学 子供支援学 内田ゼミ</SubTitle>
+          <Title>
+            <Link to="/">TOKO PROJECT</Link>
+          </Title>
         </PCWrapper>
       </MediaQuery>
       <MediaQuery maxDeviceWidth={768}>
         <SPWrapper>
-          <Title>TOKO PROJECT</Title>
-          <SubTitle>東洋大学 子供支援学 内田ゼミ</SubTitle>
+          <Title>
+            <Link to="/">TOKO PROJECT</Link>
+          </Title>
         </SPWrapper>
       </MediaQuery>
     </>

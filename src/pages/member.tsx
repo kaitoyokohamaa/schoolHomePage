@@ -12,8 +12,9 @@ import Footer from "../components/organisms/Footer";
 import "./index.css";
 import "antd/dist/antd.css";
 import MediaQuery from "react-responsive";
+import { COLOR } from "../ColorCss";
 const Wrapper = styled.div`
-  background-color: #fff;
+  background-color: ${COLOR["PRIMARY"]};
 `;
 
 const Title = styled.span`

@@ -1,166 +1,156 @@
-import React from "react";
+import React, { Fragment } from "react";
+import Main from "../MainProject";
 import ProjectCard from "../ProjectCard";
 import styled from "styled-components";
-
-import sample5 from "../../../Img/sample5.jpg";
-import sample6 from "../../../Img/sample6.jpg";
-import sample7 from "../../../Img/sample7.jpg";
-import sample8 from "../../../Img/sample8.jpg";
-import sample10 from "../../../Img/sample10.jpg";
-import TopWave from "../../../Img/topWave.jpg";
-import Wave from "../../../Img/wave.png";
 import MediaQuery from "react-responsive";
-const TopWaveImg = styled.img`
-  margin-top: -20px;
-  width: 100%;
-`;
-const WaveImg = styled.img`
-  margin-top: -60px;
-  width: 100%;
-`;
-const Wrapper = styled.section`
+import SuportsIcon from "../../../Img/suports.svg";
+import CookIcon from "../../../Img/cook.svg";
+import BooksIcon from "../../../Img/books.svg";
+import LaughIcon from "../../../Img/laugh.svg";
+import BlackboardIcon from "../../../Img/blackboard.svg";
+import InstaIcon from "../../../Img/insta.svg";
+
+const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  background-color: #c9dbfb;
   padding-bottom: 58px;
   margin-top: -10px;
+  background-color: #efefd7;
 `;
-const CardWrapper = styled.div`
-  margin: 0 auto;
-  width: 1080px;
-`;
+const Title = styled.h2`
+  font-weight: bold;
+  text-align: center;
+  margin: 80px;
+  padding-top: 20px;
+  font-size: 28px;
+  position: relative;
+  padding: 1.5rem;
 
-const SPCardWrapper = styled.div`
-  width: 100%;
+  :before {
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 5px;
+    content: "";
+    border-radius: 3px;
+    background: #000;
+  }
 `;
-const ProjectCardWrapper = styled.div`
+const ProjectWrapper = styled.div`
   display: flex;
-  flex-flow: wrap;
-`;
-
-const SPProjectCardWrapper = styled.div`
-  text-align: center;
-`;
-
-const TitleWrapper = styled.h2`
+  gap: 10px;
+  justify-content: center;
   width: 100%;
-  text-align: center;
-  :before {
-    content: "";
-    display: block;
-    text-align: center;
-    position: absolute;
-    width: 2px;
-    height: 40px;
-    margin: 0 auto 25px;
-    background-color: black;
-    left: 50%;
-  }
 `;
-const Title = styled.span`
-  text-align: center;
+const SPProjectWrapper = styled.div`
+  display: block;
+  justify-content: center;
   width: 100%;
-  font-weight: 700;
-  margin-bottom: 2.5rem;
-  font-size: 1.5rem;
-  position: relative;
-  display: inline-block;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  color: #0000000;
-  margin-top: 68px;
 `;
-const SPTitleWrapper = styled.h2`
-  width: 100%;
-  text-align: center;
-  :before {
-    content: "";
-    display: block;
-    text-align: center;
-    position: absolute;
-    width: 1px;
-    height: 40px;
-    margin: 0 auto 25px;
-    background-color: black;
-    left: 50%;
-  }
+const MainProjectWrapper = styled.div`
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80%;
 `;
-const SPTitle = styled.span`
-  text-align: center;
+const SPMainProjectWrapper = styled.div`
+  display: block;
+  justify-content: center;
   width: 100%;
-  font-weight: 700;
-  margin-bottom: 2.5rem;
-  font-size: 20px;
-  position: relative;
-  display: inline-block;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  color: #0000000;
-  margin-top: 68px;
 `;
 const StyledLink = styled.a``;
+const MainProject = [
+  {
+    name: "お悩み聞きます",
+    link: "https://schoolboards.herokuapp.com/",
+    img: BlackboardIcon,
+  },
+  {
+    name: "インスタ",
+    link: "https://www.youtube.com/watch?v=wae1CnQJ4u0",
+    img: InstaIcon,
+  },
+] as const;
 
 const Project = [
-  { name: "相談", img: sample5, Link: "https://schoolboards.herokuapp.com/" },
   {
-    name: "スポーツコーナー",
-    img: sample6,
-    Link: "https://www.youtube.com/watch?v=wae1CnQJ4u0",
+    name: "クッキング",
+    link: "https://schoolboards.herokuapp.com/",
+    img: CookIcon,
+  },
+  {
+    name: "スポーツ",
+    link: "https://www.youtube.com/watch?v=wae1CnQJ4u0",
+    img: SuportsIcon,
   },
   {
     name: "一日一発真剣お笑い",
-    img: sample7,
-    Link: "https://www.youtube.com/watch?v=pcP0FptwGyI",
+    link: "https://www.youtube.com/watch?v=pcP0FptwGyI",
+    img: LaughIcon,
   },
   {
     name: "絵本作り",
-    img: sample8,
-    Link: "https://www.youtube.com/watch?v=swpYHUW4s0o",
-  },
-  {
-    name: "オンライン海外旅行",
-    img: sample10,
-    Link: "https://www.youtube.com/watch?v=-aHHSxCh0c8",
+    link: "https://www.youtube.com/watch?v=swpYHUW4s0o",
+    img: BooksIcon,
   },
 ] as const;
 export default function index() {
   return (
     <>
-      <TopWaveImg src={TopWave} />
       <Wrapper>
-        {/* PCサイズ */}
-        <MediaQuery minDeviceWidth={768}>
-          <TitleWrapper>
-            <Title>プロジェクト</Title>
-          </TitleWrapper>
-          <CardWrapper>
-            <ProjectCardWrapper>
-              {Project.map((contents) => (
-                <StyledLink key={contents.name} href={contents.Link}>
-                  <ProjectCard name={contents.name} img={contents.img} />
-                </StyledLink>
-              ))}
-            </ProjectCardWrapper>
-          </CardWrapper>
-        </MediaQuery>
-        {/* SPサイズ */}
+        <Title>PROJECT</Title>
+        {
+          <MediaQuery minDeviceWidth={768}>
+            <ProjectWrapper>
+              {Project.map((contents) => {
+                return (
+                  <Fragment key={contents.link}>
+                    <ProjectCard name={contents.name} img={contents.img} />;
+                  </Fragment>
+                );
+              })}
+            </ProjectWrapper>
+          </MediaQuery>
+        }
+        {
+          <MediaQuery maxDeviceWidth={768}>
+            <SPProjectWrapper>
+              {Project.map((contents) => {
+                return (
+                  <Fragment key={contents.link}>
+                    <ProjectCard name={contents.name} img={contents.img} />;
+                  </Fragment>
+                );
+              })}
+            </SPProjectWrapper>
+          </MediaQuery>
+        }
+        {
+          <MediaQuery minDeviceWidth={768}>
+            <MainProjectWrapper>
+              {MainProject.map((contents) => {
+                return (
+                  <Fragment key={contents.link}>
+                    <Main name={contents.name} img={contents.img} />;
+                  </Fragment>
+                );
+              })}
+            </MainProjectWrapper>
+          </MediaQuery>
+        }
         <MediaQuery maxDeviceWidth={768}>
-          <SPTitleWrapper>
-            <SPTitle>プロジェクト</SPTitle>
-          </SPTitleWrapper>
-          <SPCardWrapper>
-            <SPProjectCardWrapper>
-              {Project.map((contents) => (
-                <StyledLink key={contents.name} href={contents.Link}>
-                  <ProjectCard name={contents.name} img={contents.img} />
-                </StyledLink>
-              ))}
-            </SPProjectCardWrapper>
-          </SPCardWrapper>
+          <SPMainProjectWrapper>
+            {MainProject.map((contents) => {
+              return (
+                <Fragment key={contents.link}>
+                  <Main name={contents.name} img={contents.img} />;
+                </Fragment>
+              );
+            })}
+          </SPMainProjectWrapper>
         </MediaQuery>
       </Wrapper>
-
-      <WaveImg src={Wave} />
     </>
   );
 }

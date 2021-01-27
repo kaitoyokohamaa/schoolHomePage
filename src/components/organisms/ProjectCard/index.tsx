@@ -1,47 +1,38 @@
 import React from "react";
-import { Card } from "antd";
 import styled from "styled-components";
-import MediaQuery from "react-responsive";
-const Img = styled.img`
-  height: 300px;
-`;
-const StyledCard = styled(Card)`
-  width: 280px;
-  margin: 30px;
-  background-color: rgb(201 219 251);
-  border: 1px solid rgb(201 219 251);
-`;
 
-const SPStyledCard = styled(Card)`
-  width: 280px;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  background-color: #fff;
-  border: 1px solid rgb(201 219 251);
-  border-radius: 10px;
-`;
 type props = {
   name: string;
   img: string;
 };
+const Wrapper = styled.div`
+  text-align: center;
+  background: #fbfbe1;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+`;
+const Title = styled.h2`
+  border: 1px solid #af5724;
+  background-color: #af5724;
+  margin: 20px;
+  color: #ffff;
+  text-align: center;
+  border-radius: 6px;
+  height: 50px;
+  line-height: 50px;
+`;
+const StyedImg = styled.img`
+  max-width: 100%;
+  height: auto;
+`;
+
 const Index = (props: props) => {
   return (
-    <div>
-      <MediaQuery minDeviceWidth={768}>
-        <StyledCard
-          hoverable
-          cover={<Img alt="example" src={props.img} />}
-          title={props.name}
-        />
-      </MediaQuery>
-      <MediaQuery maxDeviceWidth={768}>
-        <SPStyledCard
-          hoverable
-          cover={<Img alt="example" src={props.img} />}
-          title={props.name}
-        />
-      </MediaQuery>
-    </div>
+    <Wrapper>
+      <Title>{props.name}</Title>
+      <StyedImg src={props.img} />
+    </Wrapper>
   );
 };
 export default Index;
