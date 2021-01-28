@@ -13,7 +13,7 @@ export const Hamburger: FC<HamburgerProps> = ({ opened, ...rest }) => {
   const Wrapper = styled.button`
     cursor: pointer;
     position: fixed;
-    z-index: 100;
+    z-index: 13333300;
     top: 37px;
     right: 20px;
     width: 32px;

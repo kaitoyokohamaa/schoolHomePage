@@ -10,7 +10,7 @@ import LaughIcon from "../../../assets/laugh.svg";
 import BlackboardIcon from "../../../assets/blackboard.svg";
 import InstaIcon from "../../../assets/insta.svg";
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 58px;
@@ -38,14 +38,17 @@ const Title = styled.h2`
   }
 `;
 const ProjectWrapper = styled.div`
-  display: flex;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
-  width: 100%;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  color: #000;
 `;
 const SPProjectWrapper = styled.div`
   display: block;
   justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
   width: 100%;
 `;
 const MainProjectWrapper = styled.div`
@@ -59,7 +62,7 @@ const SPMainProjectWrapper = styled.div`
   justify-content: center;
   width: 100%;
 `;
-const StyledLink = styled.a``;
+
 const MainProject = [
   {
     name: "お悩み聞きます",
@@ -106,7 +109,7 @@ export default function index() {
               {Project.map((contents) => {
                 return (
                   <Fragment key={contents.link}>
-                    <ProjectCard name={contents.name} img={contents.img} />;
+                    <ProjectCard name={contents.name} img={contents.img} />
                   </Fragment>
                 );
               })}
