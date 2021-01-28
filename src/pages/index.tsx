@@ -6,7 +6,7 @@ import About from "../components/organisms/About";
 import Footer from "../components/organisms/Footer";
 import Contact from "../components/organisms/Contact";
 import { Reset } from "styled-reset";
-
+import { Meta } from "../components/organisms/Meta";
 import { ReactGenieAnimations } from "react-genie-styled-components";
 import styled from "styled-components";
 import "./index.css";
@@ -22,6 +22,7 @@ export default function Index() {
 
   return (
     <Wrapper>
+      <Meta />
       <Reset />
       <ReactGenieAnimations />
       <Header />

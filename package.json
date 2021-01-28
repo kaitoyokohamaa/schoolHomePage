@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-cara": "^1.2.18",
+    "@types/react-helmet": "^6.1.0",
     "@types/react-responsive": "^8.0.2",
     "@types/react-router-dom": "^5.1.6",
     "@types/styled-components": "^5.1.4",
@@ -32,6 +33,7 @@
     "react-dom": "^16.13.1",
     "react-genie": "^0.2.2",
     "react-genie-styled-components": "^0.1.1",
+    "react-helmet": "^6.1.0",
     "react-responsive": "^8.2.0",
     "react-router-dom": "^5.2.0",
     "react-spring": "^8.0.27",
