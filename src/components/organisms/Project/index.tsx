@@ -3,12 +3,12 @@ import Main from "../MainProject";
 import ProjectCard from "../ProjectCard";
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
-import SuportsIcon from "../../../Img/suports.svg";
-import CookIcon from "../../../Img/cook.svg";
-import BooksIcon from "../../../Img/books.svg";
-import LaughIcon from "../../../Img/laugh.svg";
-import BlackboardIcon from "../../../Img/blackboard.svg";
-import InstaIcon from "../../../Img/insta.svg";
+import SuportsIcon from "../../../assets/suports.svg";
+import CookIcon from "../../../assets/cook.svg";
+import BooksIcon from "../../../assets/books.svg";
+import LaughIcon from "../../../assets/laugh.svg";
+import BlackboardIcon from "../../../assets/blackboard.svg";
+import InstaIcon from "../../../assets/insta.svg";
 
 const Wrapper = styled.div`
   margin-left: auto;

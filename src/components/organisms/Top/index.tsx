@@ -1,9 +1,9 @@
 import React from "react";
 import { Carousel } from "antd";
-import AllStudents from "../../../Img/allstudents.jpg";
-import AllStudents2 from "../../../Img/allstudents2.jpg";
-import Student from "../../../Img/student.jpg";
-import Student2 from "../../../Img/student2.jpg";
+import AllStudents from "../../../assets/allstudents.jpg";
+import AllStudents2 from "../../../assets/allstudents2.jpg";
+import Student from "../../../assets/student.jpg";
+import Student2 from "../../../assets/student2.jpg";
 import styled from "styled-components";
 import { Reveal } from "react-genie";
 import { Animation } from "react-genie-styled-components";
