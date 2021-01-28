@@ -10,8 +10,8 @@ const Wrapper = styled.div`
 const Title = styled.h2`
   font-weight: bold;
   text-align: center;
-  margin: 80px;
-  padding-top: 20px;
+  margin: 0 80px 80px 80px;
+
   font-size: 28px;
   position: relative;
   padding: 1.5rem;
