@@ -47,6 +47,7 @@ const SpStyledDivMap = styled.div`
 const StyledDivContent = styled.div`
   margin: 60px;
   padding-top: 20px;
+  line-height: initial;
 `;
 const StyledP = styled.p`
   color: #000;
