@@ -74,52 +74,50 @@ export default function Index() {
     <>
       <Wrapper>
         {" "}
-        <Reveal animation={Animation.BounceInLeft}>
-          <Carousel autoplay>
-            <div>
-              <h3>
-                <MediaQuery minDeviceWidth={768}>
-                  <Img src={AllStudents} alt="allstudent" />
-                </MediaQuery>
-                <MediaQuery maxDeviceWidth={768}>
-                  <SPImg src={AllStudents} alt="allstudent" />
-                </MediaQuery>
-              </h3>
-            </div>
-            <div>
-              <h3>
-                <MediaQuery minDeviceWidth={768}>
-                  <Img src={AllStudents2} alt="allstudent2" />
-                </MediaQuery>
-                <MediaQuery maxDeviceWidth={768}>
-                  <SPImg src={AllStudents2} alt="allstudent2" />
-                </MediaQuery>
-              </h3>
-            </div>
-            <div>
-              <h3>
-                <MediaQuery minDeviceWidth={768}>
-                  <Img src={Student} alt="student" />
-                </MediaQuery>
-                <MediaQuery maxDeviceWidth={768}>
-                  {" "}
-                  <SPImg src={Student} alt="student" />
-                </MediaQuery>
-              </h3>
-            </div>
-            <div>
-              <h3>
-                <MediaQuery minDeviceWidth={768}>
-                  <Img src={Student2} alt="student2" />
-                </MediaQuery>
-                <MediaQuery maxDeviceWidth={768}>
-                  {" "}
-                  <SPImg src={Student2} alt="student2" />
-                </MediaQuery>
-              </h3>
-            </div>
-          </Carousel>
-        </Reveal>
+        <Carousel autoplay>
+          <div>
+            <h3>
+              <MediaQuery minDeviceWidth={768}>
+                <Img src={AllStudents} alt="allstudent" />
+              </MediaQuery>
+              <MediaQuery maxDeviceWidth={768}>
+                <SPImg src={AllStudents} alt="allstudent" />
+              </MediaQuery>
+            </h3>
+          </div>
+          <div>
+            <h3>
+              <MediaQuery minDeviceWidth={768}>
+                <Img src={AllStudents2} alt="allstudent2" />
+              </MediaQuery>
+              <MediaQuery maxDeviceWidth={768}>
+                <SPImg src={AllStudents2} alt="allstudent2" />
+              </MediaQuery>
+            </h3>
+          </div>
+          <div>
+            <h3>
+              <MediaQuery minDeviceWidth={768}>
+                <Img src={Student} alt="student" />
+              </MediaQuery>
+              <MediaQuery maxDeviceWidth={768}>
+                {" "}
+                <SPImg src={Student} alt="student" />
+              </MediaQuery>
+            </h3>
+          </div>
+          <div>
+            <h3>
+              <MediaQuery minDeviceWidth={768}>
+                <Img src={Student2} alt="student2" />
+              </MediaQuery>
+              <MediaQuery maxDeviceWidth={768}>
+                {" "}
+                <SPImg src={Student2} alt="student2" />
+              </MediaQuery>
+            </h3>
+          </div>
+        </Carousel>
       </Wrapper>
     </>
   );

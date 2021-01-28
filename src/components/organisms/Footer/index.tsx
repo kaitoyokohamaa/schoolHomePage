@@ -10,6 +10,7 @@ const Footer = styled.footer`
   padding: 30px 0 0 60px;
   color: #000;
   background-color: #efefd7;
+  line-height: initial;
 `;
 
 const FooterTitle = styled.div`

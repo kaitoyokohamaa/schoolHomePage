@@ -14,14 +14,14 @@ export const Hamburger: FC<HamburgerProps> = ({ opened, ...rest }) => {
     cursor: pointer;
     position: fixed;
     z-index: 13333300;
-    top: 37px;
+    top: 25px;
     right: 20px;
     width: 32px;
     height: 34px;
     text-decoration: none;
     background-color: transparent;
     border: 1px;
-    -webkit-font-smoothing: antialiased;
+    transition: transform 0.3s;
   `;
 
   const StyledI = styled.i<HamburgerProps>`
@@ -64,9 +64,8 @@ export const Hamburger: FC<HamburgerProps> = ({ opened, ...rest }) => {
   `;
   return (
     <Wrapper title={opened ? "メニューを閉じる" : "メニューを開く"} {...rest}>
-      {/* <StyledEM>MENU</StyledEM> */}
-
       <StyledI aria-hidden="true"></StyledI>
+
       <StyledI aria-hidden="true"></StyledI>
       <StyledI aria-hidden="true"></StyledI>
       <StyledI aria-hidden="true"></StyledI>

@@ -9,7 +9,7 @@ import BooksIcon from "../../../assets/books.svg";
 import LaughIcon from "../../../assets/laugh.svg";
 import BlackboardIcon from "../../../assets/blackboard.svg";
 import InstaIcon from "../../../assets/insta.svg";
-
+import { Link } from "gatsby";
 const Wrapper = styled.section`
   margin-left: auto;
   margin-right: auto;
@@ -54,7 +54,9 @@ const SPProjectWrapper = styled.div`
 const MainProjectWrapper = styled.div`
   display: grid;
   margin: 0 auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-top: 42px;
   width: 80%;
 `;
 const SPMainProjectWrapper = styled.div`
@@ -108,9 +110,11 @@ export default function index() {
             <ProjectWrapper>
               {Project.map((contents) => {
                 return (
-                  <Fragment key={contents.link}>
-                    <ProjectCard name={contents.name} img={contents.img} />
-                  </Fragment>
+                  <Link to={contents.link} target="_blank">
+                    <Fragment key={contents.link}>
+                      <ProjectCard name={contents.name} img={contents.img} />
+                    </Fragment>
+                  </Link>
                 );
               })}
             </ProjectWrapper>
@@ -121,9 +125,11 @@ export default function index() {
             <SPProjectWrapper>
               {Project.map((contents) => {
                 return (
-                  <Fragment key={contents.link}>
-                    <ProjectCard name={contents.name} img={contents.img} />;
-                  </Fragment>
+                  <Link to={contents.link} target="_blank">
+                    <Fragment key={contents.link}>
+                      <ProjectCard name={contents.name} img={contents.img} />;
+                    </Fragment>
+                  </Link>
                 );
               })}
             </SPProjectWrapper>
@@ -134,9 +140,11 @@ export default function index() {
             <MainProjectWrapper>
               {MainProject.map((contents) => {
                 return (
-                  <Fragment key={contents.link}>
-                    <Main name={contents.name} img={contents.img} />;
-                  </Fragment>
+                  <Link to={contents.link} target="_blank">
+                    <Fragment key={contents.link}>
+                      <Main name={contents.name} img={contents.img} />;
+                    </Fragment>
+                  </Link>
                 );
               })}
             </MainProjectWrapper>

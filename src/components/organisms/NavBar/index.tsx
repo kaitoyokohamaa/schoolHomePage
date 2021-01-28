@@ -8,6 +8,10 @@ import MediaQuery from "react-responsive";
 
 const menueLink = [
   {
+    label: "ホーム",
+    path: "/",
+  },
+  {
     label: "ゼミについて",
     path: "/about",
   },
@@ -46,7 +50,7 @@ export default function index() {
 
   const SPNavWrapper = styled.div`
     transform: translateY(${(menuOpen) => (menuOpen ? "0" : "-100%")});
-    transition: all 500ms ease !important;
+    transition: transform 0.3s;
     position: fixed;
     top: 0;
     left: 0;
@@ -54,7 +58,6 @@ export default function index() {
     height: 100%;
     padding: 68px 32px 0;
     background-color: #ffff;
-    z-index: 90;
     z-index: 20000;
   `;
 

@@ -10,6 +10,11 @@ const Wrapper = styled.div`
   background: #fbfbe1;
   border-radius: 20px;
   padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s;
+  :hover {
+    transform: translate(0, -30px);
+  }
 `;
 const Title = styled.h2`
   border: 1px solid #af5724;
@@ -23,7 +28,7 @@ const Title = styled.h2`
 `;
 const StyedImg = styled.img`
   max-width: 100%;
-  height: auto;
+  height: 360px;
 `;
 
 const Index = (props: props) => {

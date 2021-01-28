@@ -28,7 +28,7 @@ const Title = styled.span`
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   color: #000;
-  margin-top: 68px;
+  margin-top: 168px;
 `;
 const MemberWrapper = styled.div`
   display: flex;
