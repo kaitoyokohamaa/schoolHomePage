@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   margin-right: auto;
   padding-bottom: 58px;
   margin-top: -10px;
+  background-color: #efefd7;
 `;
 const Title = styled.h2`
   font-weight: bold;

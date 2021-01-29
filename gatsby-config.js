@@ -1,4 +1,10 @@
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
+const { resolve } = require("path");
+const path = require("path");
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 module.exports = {
   siteMetadata: {
@@ -8,6 +14,18 @@ module.exports = {
     siteTitleAlt: `Cara - Gatsby Starter Portfolio`,
   },
   plugins: [
+    {
+      resolve: "gatsby-source-microcms",
+      options: {
+        apiKey: process.env.API_KEY,
+        serviceId: "school",
+        apis: [
+          {
+            endpoint: "blog",
+          },
+        ],
+      },
+    },
     {
       resolve: `@lekoarts/gatsby-theme-cara`,
       // See the theme's README for all available options

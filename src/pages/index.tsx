@@ -3,8 +3,9 @@ import Header from "../components/organisms/Header";
 import Top from "../components/organisms/Top";
 import Project from "../components/organisms/Project";
 import About from "../components/organisms/About";
-import Footer from "../components/organisms/Footer";
+import Blog from "../components/organisms/Blog";
 import Contact from "../components/organisms/Contact";
+import Footer from "../components/organisms/Footer";
 import { Reset } from "styled-reset";
 import { Meta } from "../components/organisms/Meta";
 import { ReactGenieAnimations } from "react-genie-styled-components";
@@ -12,8 +13,6 @@ import styled from "styled-components";
 import "./index.css";
 import { Reveal } from "react-genie";
 import { Animation } from "react-genie-styled-components";
-import MediaQuery from "react-responsive";
-
 import { COLOR } from "../ColorCss";
 export default function Index() {
   const Wrapper = styled.div`
@@ -32,6 +31,9 @@ export default function Index() {
       </Reveal>
       <Reveal animation={Animation.FadeInUp}>
         <About />
+      </Reveal>
+      <Reveal animation={Animation.FadeInUp}>
+        <Blog />
       </Reveal>
       <Reveal animation={Animation.SlideInRight}>
         <Contact />
