@@ -6,10 +6,10 @@ const Footer = styled.footer`
   height: 150px;
   border-top: 1px solid #dae1e7;
   text-align: left;
-  margin-top: 10px;
+
   padding: 30px 0 0 60px;
-  color: #000;
-  background-color: #efefd7;
+  color: #ede6d5;
+  background-color: #a39670;
   line-height: initial;
 `;
 

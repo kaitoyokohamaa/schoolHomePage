@@ -36,7 +36,8 @@ export default function index() {
     border: 0 solid #dae1e7;
     padding-bottom: 10px;
     position: fixed;
-    background-color: #efefd7;
+    color: #ede6d5;
+    background-color: #a39670;
     top: 0;
     z-index: 20000;
     padding: 20px 0px;
@@ -62,19 +63,18 @@ export default function index() {
   `;
 
   const NavLink = styled(Link)`
-    color: #000;
+    color: #ede6d5;
     padding: 30px 40px;
     &:hover {
-      color: #ff8a73;
+      color: #574100;
     }
   `;
 
   const SPNavLink = styled(Link)`
-    color: #000;
     padding: 30px 40px;
     display: block;
     &:hover {
-      color: #ff8a73;
+      color: #574100;
     }
   `;
 
@@ -88,7 +88,7 @@ export default function index() {
               <NavLink
                 activeStyle={{
                   fontWeight: "bold",
-                  color: "#ff8a73",
+                  color: "#574100",
                 }}
                 to={link.path}
               >

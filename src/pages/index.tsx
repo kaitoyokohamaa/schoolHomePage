@@ -35,7 +35,7 @@ export default function Index() {
       <Reveal animation={Animation.FadeInUp}>
         <Blog />
       </Reveal>
-      <Reveal animation={Animation.SlideInRight}>
+      <Reveal animation={Animation.FadeInUp}>
         <Contact />
       </Reveal>
       <Footer />
