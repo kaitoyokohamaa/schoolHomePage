@@ -25,7 +25,9 @@ export default function Index() {
       <Reset />
       <ReactGenieAnimations />
       <Header />
-      <Top />
+      <Reveal animation={Animation.FadeInUp}>
+        <Top />
+      </Reveal>
       <Reveal animation={Animation.FadeInUp}>
         <Project />
       </Reveal>

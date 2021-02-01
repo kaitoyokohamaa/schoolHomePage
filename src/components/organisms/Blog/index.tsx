@@ -4,10 +4,13 @@ import { COLOR } from "../../../ColorCss";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { Card } from "antd";
 import Button from "../../atoms/Button";
+import { Reveal } from "react-genie";
+import { Animation } from "react-genie-styled-components";
 const Wrapper = styled.section`
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 58px;
+  width: 90%;
   margin-top: -10px;
   background-color: ${COLOR["PRIMARY"]};
 `;
@@ -55,7 +58,9 @@ const IndexPage = () => {
 
   return (
     <Wrapper>
-      <Title>BLOG</Title>
+      <Reveal animation={Animation.BounceInLeft}>
+        <Title>BLOG</Title>
+      </Reveal>
       <Body>
         {data.allMicrocmsBlog.edges.slice(0, 3).map(({ node }) => (
           <li key={node.blogId}>

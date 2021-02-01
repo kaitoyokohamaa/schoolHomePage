@@ -12,8 +12,8 @@ const menueLink = [
     path: "/",
   },
   {
-    label: "ゼミについて",
-    path: "/about",
+    label: "ゼミブログ",
+    path: "/blog",
   },
   {
     label: "メンバー",
