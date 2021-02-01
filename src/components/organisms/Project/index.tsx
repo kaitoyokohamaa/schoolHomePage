@@ -15,7 +15,7 @@ import { Link } from "gatsby";
 const Wrapper = styled.section`
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 58px;
+
   margin-top: -10px;
   width: 90%;
 `;

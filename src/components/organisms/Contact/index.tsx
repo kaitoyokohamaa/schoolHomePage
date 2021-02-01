@@ -6,7 +6,6 @@ import { Animation } from "react-genie-styled-components";
 const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 58px;
   margin-top: -10px;
   background-color: #efefd7;
 `;

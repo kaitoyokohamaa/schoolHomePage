@@ -9,7 +9,7 @@ import { Animation } from "react-genie-styled-components";
 const Wrapper = styled.section`
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 58px;
+
   width: 90%;
   margin-top: -10px;
   background-color: ${COLOR["PRIMARY"]};
@@ -67,7 +67,13 @@ const IndexPage = () => {
             <Link to={`/blog/${node.blogId}`}>
               <Card
                 style={{ width: 400 }}
-                cover={<img alt={node.title} src={node.contentImg.url} />}
+                cover={
+                  <img
+                    style={{ height: 266 }}
+                    alt={node.title}
+                    src={node.contentImg.url}
+                  />
+                }
                 title={node.title}
                 hoverable
               ></Card>
