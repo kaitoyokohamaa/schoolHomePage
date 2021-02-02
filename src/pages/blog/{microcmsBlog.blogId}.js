@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Header from "../../components/organisms/Header";
-import Footer from "../../components/organisms/Footer";
+import { Layout } from "../../components/organisms/Layout";
 import { COLOR } from "../../ColorCss";
 import styled from "styled-components";
+import MediaQuery from "react-responsive";
 const Wrapper = styled.section`
   margin-left: auto;
   margin-right: auto;
@@ -23,29 +23,55 @@ const Body = styled.div`
   background: #ffff;
   marign-top: 180px;
 `;
+const SpBody = styled.div`
+  width: 100%;
+  margin: 100px auto;
+  background: #ffff;
+  marign-top: 180px;
+`;
 const Content = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 100px;
+`;
+const SpContent = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
 `;
 const StyledImg = styled.img`
   width: 100%;
 `;
 const BlogPage = ({ data }) => (
   <Wrapper>
-    <Header />
-    <Body>
-      <StyledImg src={data.microcmsBlog.contentImg.url} />
-      <Content>
-        <Title>{data.microcmsBlog.title}</Title>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `${data.microcmsBlog.body}`,
-          }}
-        />
-      </Content>
-    </Body>
-    <Footer />
+    <Layout>
+      <MediaQuery minDeviceWidth={768}>
+        <Body>
+          <StyledImg src={data.microcmsBlog.contentImg.url} />
+          <Content>
+            <Title>{data.microcmsBlog.title}</Title>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `${data.microcmsBlog.body}`,
+              }}
+            />
+          </Content>
+        </Body>
+      </MediaQuery>
+      <MediaQuery maxDeviceWidth={768}>
+        <SpBody>
+          <StyledImg src={data.microcmsBlog.contentImg.url} />
+          <SpContent>
+            <Title>{data.microcmsBlog.title}</Title>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `${data.microcmsBlog.body}`,
+              }}
+            />
+          </SpContent>
+        </SpBody>
+      </MediaQuery>
+    </Layout>
   </Wrapper>
 );
 

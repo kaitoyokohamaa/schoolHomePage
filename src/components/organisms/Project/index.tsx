@@ -158,9 +158,11 @@ export default function index() {
           <SPMainProjectWrapper>
             {MainProject.map((contents) => {
               return (
-                <Fragment key={contents.link}>
-                  <Main name={contents.name} img={contents.img} />;
-                </Fragment>
+                <Link to={contents.link} target="_blank">
+                  <Fragment key={contents.link}>
+                    <Main name={contents.name} img={contents.img} />;
+                  </Fragment>
+                </Link>
               );
             })}
           </SPMainProjectWrapper>

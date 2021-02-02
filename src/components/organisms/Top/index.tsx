@@ -19,7 +19,6 @@ const Wrapper = styled.section`
   padding-bottom: 5px;
   background-color: #efefd7;
   display: block;
-  position: relative;
 `;
 
 const Img = styled.img`
