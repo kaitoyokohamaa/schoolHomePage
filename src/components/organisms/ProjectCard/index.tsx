@@ -8,12 +8,12 @@ type props = {
 const Wrapper = styled.div`
   text-align: center;
   background: #fbfbe1;
-  border-radius: 20px;
   padding: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
   transition: transform 0.3s;
   :hover {
-    transform: translate(0, -30px);
+    transform: translate(0, -10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   }
 `;
 const Title = styled.h2`
@@ -22,7 +22,6 @@ const Title = styled.h2`
   margin: 20px;
   color: #ffff;
   text-align: center;
-  border-radius: 6px;
   height: 50px;
   line-height: 50px;
 `;

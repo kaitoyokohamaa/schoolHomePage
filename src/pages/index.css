@@ -27,4 +27,13 @@ body {
   background: var(--primary);
   overflow-x: hidden;
   font-family: "Rubik", sans-serif !important;
+  color: #574100;
+}
+body a {
+  color: #e7e0cd !important;
+}
+
+/* antカードの余分な余白の削除 */
+.ant-card-body {
+  padding: 0 !important;
 }

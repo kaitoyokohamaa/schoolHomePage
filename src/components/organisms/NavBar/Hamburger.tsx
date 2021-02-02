@@ -1,5 +1,6 @@
-import React, { CSSProperties, FC, useState } from "react";
+import React, { CSSProperties, FC } from "react";
 import styled from "styled-components";
+import { COLOR } from "../../../ColorCss";
 export interface HamburgerProps {
   className?: string;
   style?: CSSProperties;

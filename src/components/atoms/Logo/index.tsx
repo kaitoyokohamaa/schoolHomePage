@@ -18,7 +18,7 @@ const SPWrapper = styled.div`
   align-self: start;
 `;
 const Title = styled.span`
-  color: #000;
+  color: #574100 !important;
   font-weight: bold;
   font-size: 38px;
 `;

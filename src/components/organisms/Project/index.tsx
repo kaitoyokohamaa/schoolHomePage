@@ -9,13 +9,15 @@ import BooksIcon from "../../../assets/books.svg";
 import LaughIcon from "../../../assets/laugh.svg";
 import BlackboardIcon from "../../../assets/blackboard.svg";
 import InstaIcon from "../../../assets/insta.svg";
+import { Reveal } from "react-genie";
+import { Animation } from "react-genie-styled-components";
 import { Link } from "gatsby";
 const Wrapper = styled.section`
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 58px;
+
   margin-top: -10px;
-  background-color: #efefd7;
+  width: 90%;
 `;
 const Title = styled.h2`
   font-weight: bold;
@@ -104,7 +106,9 @@ export default function index() {
   return (
     <>
       <Wrapper>
-        <Title>PROJECT</Title>
+        <Reveal animation={Animation.BounceInRight}>
+          <Title>PROJECT</Title>
+        </Reveal>
         {
           <MediaQuery minDeviceWidth={768}>
             <ProjectWrapper>
@@ -154,9 +158,11 @@ export default function index() {
           <SPMainProjectWrapper>
             {MainProject.map((contents) => {
               return (
-                <Fragment key={contents.link}>
-                  <Main name={contents.name} img={contents.img} />;
-                </Fragment>
+                <Link to={contents.link} target="_blank">
+                  <Fragment key={contents.link}>
+                    <Main name={contents.name} img={contents.img} />;
+                  </Fragment>
+                </Link>
               );
             })}
           </SPMainProjectWrapper>

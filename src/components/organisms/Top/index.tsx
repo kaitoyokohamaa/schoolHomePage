@@ -17,16 +17,14 @@ const Wrapper = styled.section`
   margin: 48px 0px;
   font-size: 20px;
   padding-bottom: 5px;
-  background-color: #fbfbf0;
+  background-color: #efefd7;
   display: block;
-  position: relative;
 `;
 
 const Img = styled.img`
-  width: 80%;
+  width: 90%;
   min-height: 450px;
   max-height: 590px;
-  border-radius: 10px;
   margin: 0 auto;
   margin-top: 130px;
 `;

@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
+import { Reveal } from "react-genie";
+import { Animation } from "react-genie-styled-components";
 const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 58px;
   margin-top: -10px;
+  background-color: #efefd7;
 `;
 const Title = styled.h2`
   font-weight: bold;
@@ -55,7 +57,9 @@ const StyledP = styled.p`
 export default function index() {
   return (
     <Wrapper>
-      <Title>CONTACT</Title>
+      <Reveal animation={Animation.BounceInRight}>
+        <Title>CONTACT</Title>
+      </Reveal>
       <MediaQuery minDeviceWidth={768}>
         <Body>
           <StyledDivMap>
