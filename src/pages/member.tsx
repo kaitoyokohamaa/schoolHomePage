@@ -84,7 +84,7 @@ export default function member() {
       <Layout>
         <MediaQuery minDeviceWidth={768}>
           <MemberWrapper>
-            <Title>ゼミメンバー</Title>
+            <Title>MEMBER</Title>
             {Members.map((contents) => (
               <Fragment key={contents.id}>
                 <Member
@@ -99,7 +99,7 @@ export default function member() {
         </MediaQuery>
         <MediaQuery maxDeviceWidth={768}>
           <SPMemberWrapper>
-            <Title>ゼミメンバー</Title>
+            <Title>MEMBER </Title>
             {Members.map((contents) => (
               <Fragment key={contents.id}>
                 <Member
