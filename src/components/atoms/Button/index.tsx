@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import { RightArray } from "../../../assets/rightArray.svg";
 const Wrapper = styled.div`
   width: 100%;
   text-align: center;
@@ -27,9 +28,11 @@ const Button = styled.button`
 export default function index() {
   return (
     <Wrapper>
-      <Button>
-        <Link to="/blog">もっと見る ➡️</Link>
-      </Button>
+      <Link to="/blog">
+        <Button>
+          もっと見る <img src={RightArray} />
+        </Button>
+      </Link>
     </Wrapper>
   );
 }

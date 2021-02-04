@@ -24,14 +24,11 @@ const menueLink = [
 export default function index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const Wrapper = styled.div`
-    display: grid;
     display: flex;
-    height: auto;
+
     width: 100%;
-    min-height: auto;
-    grid-template-rows: 1fr;
-    grid-template-columns: 100%;
-    padding-bottom: 0px;
+    height: 100px;
+
     box-sizing: border-box;
     border: 0 solid #dae1e7;
     padding-bottom: 10px;
