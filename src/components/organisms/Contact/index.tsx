@@ -39,6 +39,7 @@ const SpBody = styled.div`
   display: block;
   width: 100%;
   text-align: center;
+  padding: 1px 0px;
 `;
 const StyledDivMap = styled.div`
   margin: 40px;
